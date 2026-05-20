@@ -71,6 +71,7 @@ platform_do_upgrade() {
     tplink,tl-xdr6086|\
     tplink,tl-xdr6088|\
 	tplink,wma301|\
+	tplink,wma301-256m|\
 	tplink,wma301-stock|\
 	xiaomi,redmi-router-ax6000-ubootmod|\
 	xiaomi,mi-router-ax3000t-ubootmod|\
