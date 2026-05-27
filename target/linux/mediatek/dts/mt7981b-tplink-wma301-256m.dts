@@ -1,38 +1,14 @@
 // SPDX-License-Identifier: GPL-2.0-or-later OR MIT
 
 /dts-v1/;
-#include <dt-bindings/gpio/gpio.h>
-#include <dt-bindings/input/input.h>
-#include <dt-bindings/leds/common.h>
-
-#include "mt7981b-tplink-wma301-common.dtsi"
+#include "mt7981b-tplink-wma301-v2.dtsi"
+#include "mt798x-nand-256m-230m-ubi.dtsi"
 
 / {
-	model = "TP-Link WMA301 (256MiB NAND)";
+	model = "TP-Link WMA301 V2.0 (256MiB NAND)";
 	compatible = "tplink,wma301-256m", "mediatek,mt7981";
 };
 
 &chosen {
 	bootargs = "console=ttyS0,115200n1 loglevel=8 earlycon=uart8250,mmio32,0x11002000";
-};
-
-&partitions {
-	partition@580000 {
-		label = "ubi";
-		compatible = "linux,ubi";
-		reg = <0x0580000 0xe640000>;
-	};
-};
-
-&spi_nand {
-	spi-cal-enable;
-	spi-cal-mode = "read-data";
-	spi-cal-datalen = <7>;
-	spi-cal-data = /bits/ 8 <0x53 0x50 0x49 0x4E 0x41 0x4E 0x44>;
-	spi-cal-addrlen = <5>;
-	spi-cal-addr = /bits/ 32 <0x0 0x0 0x0 0x0 0x0>;
-
-	mediatek,nmbm;
-	mediatek,bmt-max-ratio = <1>;
-	mediatek,bmt-max-reserved-blocks = <64>;
 };

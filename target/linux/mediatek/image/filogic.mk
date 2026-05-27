@@ -2260,7 +2260,7 @@ TARGET_DEVICES += tplink_tl-xtr8488
 
 define Device/tplink_wma301
   DEVICE_VENDOR := TP-Link
-  DEVICE_MODEL := WMA301
+  DEVICE_MODEL := WMA301 V2.0
   DEVICE_DTS := mt7981b-tplink-wma301
   DEVICE_DTS_DIR := ../dts
   SUPPORTED_DEVICES += mediatek,mt7981-spim-snand-rfb
@@ -2282,7 +2282,7 @@ TARGET_DEVICES += tplink_wma301
 
 define Device/tplink_wma301-256m
   DEVICE_VENDOR := TP-Link
-  DEVICE_MODEL := WMA301
+  DEVICE_MODEL := WMA301 V2.0
   DEVICE_VARIANT := (256m layout)
   DEVICE_DTS := mt7981b-tplink-wma301-256m
   DEVICE_DTS_DIR := ../dts
@@ -2305,7 +2305,7 @@ TARGET_DEVICES += tplink_wma301-256m
 
 define Device/tplink_wma301-stock
   DEVICE_VENDOR := TP-Link
-  DEVICE_MODEL := WMA301
+  DEVICE_MODEL := WMA301 V2.0
   DEVICE_VARIANT := (stock layout)
   DEVICE_DTS := mt7981b-tplink-wma301-stock
   DEVICE_DTS_DIR := ../dts
@@ -2328,7 +2328,7 @@ TARGET_DEVICES += tplink_wma301-stock
 
 define Device/tplink_wma301-ubootmod
   DEVICE_VENDOR := TP-Link
-  DEVICE_MODEL := WMA301
+  DEVICE_MODEL := WMA301 V2.0
   DEVICE_VARIANT := (OpenWrt layout)
   DEVICE_DTS := mt7981b-tplink-wma301-ubootmod
   SUPPORTED_DEVICES += tplink,wma301 mediatek,mt7981
