@@ -200,7 +200,6 @@ o = s:option(ListValue, "protocol", translate("Protocol"))
 o.default = "tcp"
 o:value("tcp", "TCP")
 o:value("udp", "UDP")
-o:value("udplite", "UDP-Lite")
 o:value("sctp", "SCTP")
 o:value("dccp", "DCCP")
 
