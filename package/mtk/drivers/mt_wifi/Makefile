@@ -325,6 +325,10 @@ if [ "$$(CONFIG_MTK_WIFI_FW_BIN_LOAD)" = "y" ]; then \
 	if [ "$$(CONFIG_MTK_CHIP_MT7986)" = "y" ] ; then \
 		if [ "$$(CONFIG_MTK_MT_WIFI_FIRMWARE_PATH_MT7986)" != "" ]; then \
 			$(INSTALL_BIN) ./files/$$(CONFIG_MTK_MT_WIFI_FIRMWARE_PATH_MT7986)/* $(1)/lib/firmware/; \
+			if [ "$$(CONFIG_MTK_WIFI_SKU_TYPE)" = "AX4200" ] ; then \
+				$(INSTALL_BIN) ./files/mt7986-ax4200-eeprom/MT7986_ePAeLNA_EEPROM_ONEADIE_DBDC.bin \
+				./files/mt7986-ax4200-eeprom/MT7986_ePAeLNA_EEPROM_ONEADIE_DBDC_TEST.bin $(1)/lib/firmware/; \
+			fi; \
 		else \
 			$(INSTALL_BIN) $(PKG_BUILD_DIR)/bin/mt7986/rebb/WIFI_RAM_CODE_MT7986.bin \
 			$(PKG_BUILD_DIR)/bin/mt7986/rebb/WIFI_RAM_CODE_MT7986_MT7975.bin \
