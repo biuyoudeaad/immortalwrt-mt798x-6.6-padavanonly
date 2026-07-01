@@ -936,7 +936,7 @@ endef
 TARGET_DEVICES += cudy_tr3000-v1-256mb
 
 define Device/pgy_x1pro-v1-ubootmod
-  DEVICE_VENDOR := Pgy
+  DEVICE_VENDOR := PGY
   DEVICE_MODEL := X1Pro
   DEVICE_VARIANT := v1 MOD
   DEVICE_DTS := mt7981b-pgy-x1pro-v1-ubootmod
