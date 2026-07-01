@@ -37,6 +37,7 @@ abt,asr3000|\
 cetron,ct3003-ubootmod|\
 cmcc,a10-ubootmod|\
 h3c,magic-nx30-pro|\
+honor,fur-602*|\
 imou,lc-hx3001|\
 jcg,q30-pro|\
 mediatek,7981r128|\
@@ -88,9 +89,7 @@ cmcc,rax3000me|\
 jdcloud,re-cp-03|\
 konka,komi-a31|\
 sn,r1|\
-supergateway,s20l|\
-supergateway,s20m|\
-supergateway,s20p)
+supergateway,s20*)
 	. /lib/upgrade/fit.sh
 	export_fitblk_bootdev
 	case "$CI_METHOD" in
